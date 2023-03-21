@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIGN IN</title>
+    <title>CONNEXION</title>
 </head>
 <body>
     <h4 class="inscription"><a href="inscription.php">Inscivez-vous</a></h4>

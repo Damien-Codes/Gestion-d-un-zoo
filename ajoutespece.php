@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css">
-    <title>Zoo</title>
+    <title>Ajout d'annimaux</title>
 </head>
 <body>
-    <nav>
+<nav>
         <div class="home">
             <h2 class="#"><a href="home.php">HOME</a></h2>
         </div>
@@ -36,21 +36,28 @@
              </ul>
         </div>
         <div class="logout">
-            <?php
-            // Connexion a la base de données
-            $con = mysqli_connect("localhost","root","", "gestionzoo");
+        <?php
+        // Connexion a la base de données
+        $con = mysqli_connect("localhost","root","", "gestionzoo");
+        // session connecté
+        session_start();
 
-            session_start();
-            $_SESSION['login']=$_POST['login'];
-
-            // echo "<h1> $login :</h1>";
-            echo $_SESSION["login"];
-            echo  '<h3><a href="logout.php">Deconnexion</a></h3>';
-            ?>
+        echo $_SESSION["login"];
+        echo  '<h3><a href="logout.php">Deconnexion</a></h3>'
+        ?>
         </div>
     </nav>
     <div class="center">
-        <h1>PROJET GESTION DU ZOO PPE4</h1>
+        <form Method="POST" action="home.php">
+            <h1>AJOUTER</h1>
+            <h4 class="indentifiant">Nom : </h4><input type="text" name="nom" value="">
+            <h4 class="indentifiant">Nourriture : </h4><input type="text" name="Nourriture" value="">
+            <h4 class="indentifiant">Durée de vie : </h4><input type="text" name="Durée de vie" value="">
+            <h4 class="indentifiant">Habitat : </h4><input type="text" name="Habitat" value="">
+            <br>
+            <br>
+            <input class="button" type="submit" value="Ajouter">
+        </form>
     </div>
 </body>
 </html>

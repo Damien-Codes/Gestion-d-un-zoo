@@ -48,6 +48,7 @@
         </div>
     </nav>
     <div class="center">
+    <style>.center{justify-content: center;}</style>
         <form Method="POST" action="home.php">
             <h1>AJOUTER</h1>
             <h4 class="indentifiant">Especes : </h4><input type="text" name="espece" value="">

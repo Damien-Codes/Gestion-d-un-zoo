@@ -17,21 +17,29 @@
             <br>
             <br>
             <input class="button" type="submit" value="Connexion">
-            <h4 class="#"><a href="home.php">HOME</a></h4>
+            <!-- <h4 class="#"><a href=".php">HOME</a></h4> -->
         </form>
     </div>
-<?php
-if(!empty($_POST)){
-// Connexion a la base de données
-$con = mysqli_connect("localhost","root","", "gestionzoo");
-// Récuperation des champs dans un formulaire
-$login=$_POST['login'];
-$mdp=$_POST['password'];
-// Préparation de la requete
-$requete="INSERT INTO personnel (login, Mot_de_passe) VALUES ('$login', '$mdp')";
-// Execution de la requete
-$resultat=mysqli_query($con, $requete);
-}
-?>
+    <?php
+    if(!empty($_POST)){
+    // Connexion a la base de données
+    $con = mysqli_connect("localhost","root","", "gestionzoo");
+    // Récuperation des champs dans un formulaire
+    $login=$_POST['login'];
+    $mdp=$_POST['password'];
+    // Préparation de la requete
+    $requete="SELECT * from personnel where login= '$login' and mdp= '$mdp' ";
+    // $requete="SELECT * FROM personnel WHERE (login, Mot_de_passe) VALUES ('$login', '$mdp')";
+    // Execution de la requete
+    $resultat=mysqli_query($con, $requete);
+        
+        if ($nbrligne==1){
+            header("location:home.php");
+        }
+        else{
+            header("location:inscription.php");
+        }
+    }
+    ?>
 </body>
 </html>

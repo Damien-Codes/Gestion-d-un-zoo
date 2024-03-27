@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: #f8efef;
     margin:0%;
     padding:0%;
 }
@@ -13,16 +13,18 @@ a{
     padding: 5px;
 }
 .div{
+    justify-content: center;
     text-align:center;
     margin-top: 20vh;
     padding: 30px 5px;
     margin-left: 30%;
     margin-right: 30%;
     border-radius: 16px;
-    background-color: #F7F7F7;
+    background-color: #a09090;
 }
 .button{
-    background-color: #33E3FF;
+    background-color: #ecb0b0;
+    justify-content: center;
     border-radius: 8px;
     border: 0px;
     width: 75%;
@@ -32,6 +34,17 @@ input{
     border-radius: 8px;
     width: 75%;
     padding: 5px 0px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20vh;
+    padding: 30px 5px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 16px;
+    background-color: #a09090;
 }
 .indentifiant{
     display: flex;

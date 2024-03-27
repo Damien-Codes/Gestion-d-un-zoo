@@ -1,10 +1,11 @@
 body{
     margin: 0;
     padding: 0;
+    
 }
 
 nav{
-    background-color: #F7F7F7;
+    background-color: #978888;
     width: 98%;
     height: 13vh;
     border-bottom: #000 2px solid;
@@ -75,7 +76,7 @@ li ul{
     font-size:1em
   }
   #menu-accordeon li:hover {
-     background: #33E3FF
+     background: #867156
   }
   #menu-accordeon li li:hover {
      background: #F7F7F7;
@@ -98,5 +99,5 @@ li ul{
     margin-left: 30%;
     margin-right: 30%;
     border-radius: 16px;
-    background-color: #F7F7F7;
+    background-color: #a09090;
 }
